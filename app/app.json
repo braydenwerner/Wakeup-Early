@@ -1,0 +1,12 @@
+{
+  "name": "Wakeup-Early",
+  "displayName": "Wakeup-Early",
+  "expo": {
+    "name": "Wakeup-Early",
+    "slug": "Wakeup-Early",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
