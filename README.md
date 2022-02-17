@@ -1,0 +1,3 @@
+- No snooze feature
+- However, if user dismisses notification and does not complete challenge, schedule an alarm for 5 minutes from then
+- Listener in index.js for notification

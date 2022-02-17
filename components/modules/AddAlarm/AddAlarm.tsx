@@ -58,6 +58,10 @@ export const AddAlarm: React.FC = () => {
             visibility: AndroidVisibility.PUBLIC,
             autoCancel: false,
             sound: 'bussin.mp3',
+            ongoing: true,
+            fullScreenAction: {
+              id: uuidv4(),
+            },
             actions: [
               {
                 title: '<b>Dance</b> &#128111;',
