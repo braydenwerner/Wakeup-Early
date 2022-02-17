@@ -33,6 +33,9 @@ export const AddAlarm: React.FC = () => {
       id: `channel-${uuidv4()}`,
       name: 'Important Notifications',
       importance: AndroidImportance.HIGH,
+      vibration: true,
+      sound: 'bussin',
+      vibrationPattern: [50, 50, 50, 50, 50, 50, 50, 50],
     })
 
     let date = new Date(Date.now())
@@ -50,14 +53,13 @@ export const AddAlarm: React.FC = () => {
       await notifee.createTriggerNotification(
         {
           id: `trigger-${uuidv4()}`,
-          body: 'The <p style="text-decoration: line-through">body can</p> also be <p style="color: #ffffff; background-color: #9c27b0"><i>styled too</i></p> &#127881;!',
+          body: 'custom sound? The <p style="text-decoration: line-through">body can</p> also be <p style="color: #ffffff; background-color: #9c27b0"><i>styled too</i></p> &#127881;!',
           android: {
             channelId,
             color: AndroidColor.RED,
             importance: AndroidImportance.HIGH,
             visibility: AndroidVisibility.PUBLIC,
             autoCancel: false,
-            sound: 'bussin.mp3',
             ongoing: true,
             fullScreenAction: {
               id: uuidv4(),
